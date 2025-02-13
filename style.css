@@ -4,12 +4,24 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
     background-color: #F8C8DC;
     background-image: url("./img/geeks_logo.png");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     padding: 10px;
+}
+
+.container {
+    max-width: 90%;
+}
+
+.gif_container img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Стили для текста */
@@ -49,21 +61,12 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #FAF9F6;
-}
-
 /* Кнопка "Нет" с динамическим движением */
 #noButton {
     position: absolute;
     transition: 0.5s;
 }
 
-/* Изображение адаптируем под экран */
-.gif_container img {
-    width: 80%;
-    max-width: 300px;
-}
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 600px) {

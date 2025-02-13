@@ -11,14 +11,14 @@ body {
 
 #noButton {
     position: absolute;
-    margin-left: 150px;
+    margin-left: 250px;
     transition: 0.5s;
     /* Smooth movement */
 }
 
 #yesButton {
     position: absolute;
-    margin-right: 150px;
+    margin-right: 250px;
     /* Smooth movement */
 }
 
@@ -74,10 +74,6 @@ body {
     border: none;
     border-radius: 12px;
     transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #FAF9F6;
 }
 
 .gif_container {
