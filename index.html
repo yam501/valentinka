@@ -21,15 +21,12 @@
             const mainText = 'Ты будешь моей валентинкой?';
             document.getElementById("headerText").textContent = mainText;
             function nextPage() {
+                document.getElementById("headerText").textContent = 'Сосал?';
                 document.getElementById('yesButton').style.display = 'none';
                 document.getElementById('noButton').style.display = 'none';
-                document.getElementById("headerText").textContent = 'Сосал?';
-                setTimeout(() => {
-                    document.getElementById("headerText").textContent = mainText;
-                }, 500)
                 setTimeout(() => {
                     window.location.href = "yes.html";
-                }, 1500)
+                }, 1000)
             }
 
             function moveButton() {
