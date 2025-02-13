@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./yesStyle.css">
+</head>
+<body>
+<div class="container">
+    <div class="text" >
+        <h1 class = "header_text" id="headerText"></h1>
+    </div>
+    <div class="gif_container">
+        <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+    </div>
+    <div class = "buttons">
+        <button class="btn" id = "yesButton" onclick="nextPage()">Да</button>
+        <button class="btn" id="noButton" onmouseover="moveButton()">Нет</button>
+        <script>
+            const mainText = 'Ты будешь моей валентинкой?';
+            document.getElementById("headerText").textContent = mainText;
+            function nextPage() {
+                document.getElementById('yesButton').style.display = 'none';
+                document.getElementById('noButton').style.display = 'none';
+                document.getElementById("headerText").textContent = 'Сосал?';
+                setTimeout(() => {
+                    document.getElementById("headerText").textContent = mainText;
+                }, 500)
+                setTimeout(() => {
+                    window.location.href = "yes.html";
+                }, 1500)
+            }
+
+            function moveButton() {
+                let x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                let y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                document.getElementById('noButton').style.left = `${x}px`;
+                document.getElementById('noButton').style.top = `${y}px`;
+            }
+        </script>
+    </div>
+</div>
+
+</body>
+</html>
